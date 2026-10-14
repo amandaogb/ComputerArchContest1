@@ -57,3 +57,23 @@ Select the Win32/x86 build configuration.
 Build the project.
 
 Run the program.
+
+Development Plan
+
+## Week 1 – Basic Game
+
+Person 1:
+
+Main menu
+
+User input
+
+Shooting power selection
+
+Person 2:
+
+Shooting procedure
+
+Shooting angle input
+
+Shot success calculation
