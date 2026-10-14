@@ -42,3 +42,18 @@ Different difficulty levels
 ASCII basketball graphics
 
 Option to play again
+
+
+## How to Compile and Run
+
+Install Visual Studio with C++ development tools.
+
+Configure MASM and the Irvine32 library.
+
+Open the project in Visual Studio.
+
+Select the Win32/x86 build configuration.
+
+Build the project.
+
+Run the program.
