@@ -22,3 +22,23 @@ Library: Irvine32
 IDE: Visual Studio
 
 Platform: Windows (32-bit x86 application)
+
+## Planned Game Features
+
+Main menu
+
+Shooting angle selection
+
+Shooting power selection
+
+Shot success or failure calculation
+
+Five shooting attempts per game
+
+Score tracking
+
+Different difficulty levels
+
+ASCII basketball graphics
+
+Option to play again
