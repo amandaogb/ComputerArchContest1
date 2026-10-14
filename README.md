@@ -8,11 +8,11 @@ We decided to create a simple basketball game called Basketball Free Throw Game.
 The Player attempts to make free throws by selecting a shooting angle and power level. The game determines if it is a successful shot and lets the user know by displaying it on the screen.
 We are developing this game for CSE3120 class at Florida Institute of Technology
 
-# Team Members
+## Team Members
 -Amanda Ogbonna
 -Elif Bayrak
 
-# Tools
+## Tools
 Language: x86 Assembly(MASM)
 Library: Irvine32
 IDE: Visual Studio
