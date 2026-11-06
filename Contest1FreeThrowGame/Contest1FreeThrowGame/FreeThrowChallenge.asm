@@ -72,6 +72,15 @@ CheckShot PROC
     mov edx, OFFSET madeMsg
     jmp ShowResult
 
+    Missed:
+    mov edx, OFFSET missedMsg
+
+ShowResult:
+    call WriteString
+    call Crlf
+    ret
+CheckShot ENDP
+
 
 ; Increase score if shot is made
 
@@ -89,6 +98,8 @@ main proc
 
     call Crlf
     call GetAngle
+    call Crlf
+    call CheckShot
 
 	; Call main menu procedure
     ; Initialize score and shot number
