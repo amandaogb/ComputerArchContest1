@@ -82,7 +82,7 @@ ShowResult:
 CheckShot ENDP
 
 
-; Increase score if shot is made
+; Increase score if shot is made 
 
 ; Create procedure to display final score
 main proc
