@@ -19,7 +19,8 @@ menuChoice DWORD ?
 
 
 ; Add shot made/missed messages
-
+madeMsg BYTE "SHOT MADE!", 0
+missedMsg BYTE "SHOT MISSED!", 0
 
 ; Add score and shot number variables
 
@@ -58,6 +59,18 @@ GetAngle PROC
 GetAngle ENDP
 
 ; Create procedure to check if shot is made or missed
+CheckShot PROC
+    cmp shootingAngle, 40
+    jl Missed
+    cmp shootingAngle, 50
+    jg Missed
+    cmp shootingPower, 5
+    jl Missed
+    cmp shootingPower, 7
+    jg Missed
+
+    mov edx, OFFSET madeMsg
+    jmp ShowResult
 
 
 ; Increase score if shot is made
