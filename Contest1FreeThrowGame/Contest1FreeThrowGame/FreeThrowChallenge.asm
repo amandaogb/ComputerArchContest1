@@ -141,6 +141,7 @@ ShotLoop:
     ; Call shooting angle procedure
     ; Call shot calculation procedure
     ; Display final score
+    call ShowFinalScore
 
 EndGame: 
 	exit
