@@ -14,6 +14,13 @@ shootingPower DWORD ?
 
 .code
 ; Create procedure to display main menu
+GetPower PROC
+mov edx, OFFSET promptMsg
+	call WriteString
+	call ReadInt
+	mov shootingPower, eax
+	ret
+GetPower ENDP
 
 ; Create procedure to get shooting power
 
@@ -27,10 +34,8 @@ main proc
 	mov edx, OFFSET titleMsg
 	call WriteString
 	call Crlf
-	mov edx, OFFSET promptMsg
-	call WriteString
-	call ReadInt
-	mov shootingPower, eax
+	
+	call GetPower
 
 	; Call main menu procedure
     ; Initialize score and shot number
