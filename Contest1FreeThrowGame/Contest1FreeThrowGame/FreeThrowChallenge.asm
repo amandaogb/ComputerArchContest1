@@ -103,13 +103,6 @@ main proc
     mov score, 0
     mov shotNumber, 1
 
-	call GetPower
-
-    call Crlf
-    call GetAngle
-    call Crlf
-    call CheckShot
-
 	; Call main menu procedure
     ; Initialize score and shot number
     ; Create loop for 5 shooting attempts
