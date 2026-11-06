@@ -77,3 +77,6 @@ Shooting procedure
 Shooting angle input
 
 Shot success calculation
+
+## Problems
+Getting the virus error OCT 27
