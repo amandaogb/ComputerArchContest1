@@ -11,13 +11,36 @@ shootingAngle DWORD ?
 
 
 ; Add main menu messages
+menuMsg BYTE "1. Start Game", 13,10, "2. Exit", 0 
+choiceMsg BYTE "Enter your choice: ", 0
+menuChoice DWORD ?
+
 ; Add shooting angle message and variable
+
+
 ; Add shot made/missed messages
+
+
 ; Add score and shot number variables
+
+
 ; Add final score message
+
 
 .code
 ; Create procedure to display main menu
+ShowMenu PROC
+    mov edx, OFFSET menuMsg
+    call WriteString
+    call Crlf
+    mov edx, OFFSET choiceMsg
+    call WriteString
+    call ReadInt
+    mov menuChoice, eax
+    ret
+ShowMenu ENDP
+
+; Create procedure to get shooting power
 GetPower PROC
 mov edx, OFFSET promptMsg
 	call WriteString
@@ -25,9 +48,6 @@ mov edx, OFFSET promptMsg
 	mov shootingPower, eax
 	ret
 GetPower ENDP
-
-; Create procedure to get shooting power
-
 ; Create procedure to get shooting angle
 GetAngle PROC
     mov edx, OFFSET angleMsg
@@ -38,6 +58,8 @@ GetAngle PROC
 GetAngle ENDP
 
 ; Create procedure to check if shot is made or missed
+
+
 ; Increase score if shot is made
 
 ; Create procedure to display final score
