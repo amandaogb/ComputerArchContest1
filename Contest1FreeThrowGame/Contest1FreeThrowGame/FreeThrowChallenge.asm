@@ -88,6 +88,8 @@ CheckShot ENDP
 ; Increase score if shot is made 
 
 ; Create procedure to display final score
+
+
 main proc
 	mov edx, OFFSET titleMsg
 	call WriteString
@@ -96,6 +98,10 @@ main proc
     call ShowMenu
     cmp menuChoice, 2 
     je EndGame
+
+    ;Initialize score and shot number
+    mov score, 0
+    mov shotNumber, 1
 
 	call GetPower
 
@@ -107,6 +113,24 @@ main proc
 	; Call main menu procedure
     ; Initialize score and shot number
     ; Create loop for 5 shooting attempts
+ShotLoop:
+    mov edx, OFFSET shotNumberMsg
+    call WriteString
+    mov eax, shotNumber
+    call WriteDec
+    call Crlf
+
+    call GetPower
+    call Crlf
+
+    call GetAngle
+    call Crlf
+
+    call CheckShot
+
+    inc ShotNumber
+    cmp ShotNumber, 5
+    jle ShotLoop
     ; Display current shot number
     ; Call shooting power procedure
     ; Call shooting angle procedure
