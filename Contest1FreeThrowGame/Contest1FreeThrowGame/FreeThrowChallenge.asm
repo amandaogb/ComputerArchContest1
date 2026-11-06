@@ -23,7 +23,9 @@ madeMsg BYTE "SHOT MADE!", 0
 missedMsg BYTE "SHOT MISSED!", 0
 
 ; Add score and shot number variables
-
+score DWORD 0
+shotNumber DWORD 1
+shotNumberMsg BYTE "Shot Number: ", 0
 
 ; Add final score message
 
@@ -69,6 +71,7 @@ CheckShot PROC
     cmp shootingPower, 7
     jg Missed
 
+    inc score
     mov edx, OFFSET madeMsg
     jmp ShowResult
 
