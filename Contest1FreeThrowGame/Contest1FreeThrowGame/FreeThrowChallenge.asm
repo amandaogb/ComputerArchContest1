@@ -31,6 +31,16 @@ main proc
 	call WriteString
 	call ReadInt
 	mov shootingPower, eax
+
+	; Call main menu procedure
+    ; Initialize score and shot number
+    ; Create loop for 5 shooting attempts
+    ; Display current shot number
+    ; Call shooting power procedure
+    ; Call shooting angle procedure
+    ; Call shot calculation procedure
+    ; Display final score
+
 	exit
 main ENDP
 
