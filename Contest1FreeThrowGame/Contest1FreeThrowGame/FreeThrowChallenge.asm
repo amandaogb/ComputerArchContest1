@@ -68,6 +68,10 @@ main proc
 	call WriteString
 	call Crlf
 	
+    call ShowMenu
+    cmp menuChoice, 2 
+    je EndGame
+
 	call GetPower
 
     call Crlf
@@ -82,6 +86,7 @@ main proc
     ; Call shot calculation procedure
     ; Display final score
 
+EndGame: 
 	exit
 main ENDP
 
