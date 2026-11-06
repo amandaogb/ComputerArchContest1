@@ -28,7 +28,8 @@ shotNumber DWORD 1
 shotNumberMsg BYTE "Shot Number: ", 0
 
 ; Add final score message
-
+finalMsg BYTE "GAME OVER! Final Score: ", 0
+outOfMsg BYTE " out of 5", 0
 
 .code
 ; Create procedure to display main menu
@@ -88,6 +89,17 @@ CheckShot ENDP
 ; Increase score if shot is made 
 
 ; Create procedure to display final score
+ShowFinalScore PROC
+    call Crlf
+    mov edx, OFFSET finalMsg
+    call WriteString
+    mov eax, score
+    call WriteDec
+    mov edx, OFFSET outOfMsg
+    call WriteString
+    call Crlf
+    ret
+ShowFinalScore ENDP
 
 
 main proc
