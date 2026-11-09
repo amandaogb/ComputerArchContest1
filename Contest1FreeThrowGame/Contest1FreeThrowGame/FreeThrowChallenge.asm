@@ -1,6 +1,7 @@
 INCLUDE Irvine32.inc 
 
 .data
+
 ;Game Title
 titleMsg BYTE "===== FREE THROW CHALLENGE!!! =====", 0
 
@@ -32,6 +33,7 @@ finalMsg BYTE "GAME OVER! Final Score: ", 0
 outOfMsg BYTE " out of 5", 0
 
 .code
+
 ; Create procedure to display main menu
 ShowMenu PROC
     mov edx, OFFSET menuMsg
@@ -63,20 +65,24 @@ GetAngle ENDP
 
 ; Create procedure to check if shot is made or missed
 CheckShot PROC
+    ;Check shooting angle
     cmp shootingAngle, 40
     jl Missed
     cmp shootingAngle, 50
     jg Missed
+    
+    ;Check shooting power
     cmp shootingPower, 5
     jl Missed
     cmp shootingPower, 7
     jg Missed
 
+    ;Increase the    score if the shot is made
     inc score
     mov edx, OFFSET madeMsg
     jmp ShowResult
 
-    Missed:
+Missed:
     mov edx, OFFSET missedMsg
 
 ShowResult:
@@ -85,8 +91,6 @@ ShowResult:
     ret
 CheckShot ENDP
 
-
-; Increase score if shot is made 
 
 ; Create procedure to display final score
 ShowFinalScore PROC
@@ -101,7 +105,7 @@ ShowFinalScore PROC
     ret
 ShowFinalScore ENDP
 
-
+;MAIN
 main proc
 	mov edx, OFFSET titleMsg
 	call WriteString
