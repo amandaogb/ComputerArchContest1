@@ -132,11 +132,15 @@ Improved code comments and formatting
 
 Help fix any remaining bugs
 
+Added Input validation for angle
+
 ### Elif Bayrak:
 
 Test shooting calculations with different inputs
 
 Update project documentation
+
+Added Input validation for power
 
 ### Both Team Members:
 
