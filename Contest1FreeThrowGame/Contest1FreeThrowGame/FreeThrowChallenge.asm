@@ -32,6 +32,8 @@ shotNumberMsg BYTE "Shot Number: ", 0
 finalMsg BYTE "GAME OVER! Final Score: ", 0
 outOfMsg BYTE " out of 5", 0
 
+;Invalid Power Message
+invalidPowerMsg BYTE "Invalid power! Please keep your value between 1-10", 0
 .code
 
 ; Create procedure to display main menu
