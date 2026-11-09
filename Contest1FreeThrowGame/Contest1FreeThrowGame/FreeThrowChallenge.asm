@@ -63,7 +63,10 @@ GetPowerInput: ;come back here if the number is invalid
     ret
 
     InvalidPower:
-    ;will add this part
+    mov edx, OFFSET invalidPowerMsg ;the error message
+    call WriteString
+    call Crlf
+    jmp GetPowerInput ;ask for power again
 GetPower ENDP
 ; Create procedure to get shooting angle
 GetAngle PROC
