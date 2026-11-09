@@ -148,10 +148,6 @@ ShotLoop:
     jle ShotLoop
 
 
-    ; Display current shot number
-    ; Call shooting power procedure
-    ; Call shooting angle procedure
-    ; Call shot calculation procedure
     ; Display final score
     call ShowFinalScore
 
