@@ -76,6 +76,7 @@ GetPower ENDP
 
 ; Create procedure to get shooting angle
 GetAngle PROC
+GetAngleInput:
     mov edx, OFFSET angleMsg
     call WriteString
     call ReadInt
@@ -88,6 +89,12 @@ GetAngle PROC
 
     mov shootingAngle, eax
     ret
+
+InvalidAngle:
+    mov edx, OFFSET invalidAngleMsg
+    call WriteString
+    call Crlf
+    jmp GetAngleInput
 GetAngle ENDP
 
 ; Create procedure to check if shot is made or missed
