@@ -31,6 +31,8 @@ Shooting angle selection(1-90)
 
 Shooting power selection(1-10)
 
+Input validation for shooting power, angle, and menu choices
+
 Shot success or failure calculation
 
 Five shooting attempts per game
@@ -81,8 +83,6 @@ Different difficulty levels
 ASCII basketball graphics
 
 Option to play again
-
-Input validation for shooting power, angle, and menu choices
 
 ## Week 1 – October 27: Initial Setup
 
