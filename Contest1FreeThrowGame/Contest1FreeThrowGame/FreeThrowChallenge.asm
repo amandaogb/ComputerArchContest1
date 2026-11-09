@@ -106,11 +106,14 @@ ShowFinalScore PROC
 ShowFinalScore ENDP
 
 ;MAIN
-main proc
+main PROC
+    ;Display game title
 	mov edx, OFFSET titleMsg
 	call WriteString
 	call Crlf
 	
+
+    ;Call Main Menu Procedure
     call ShowMenu
     cmp menuChoice, 2 
     je EndGame
@@ -119,27 +122,32 @@ main proc
     mov score, 0
     mov shotNumber, 1
 
-	; Call main menu procedure
-    ; Initialize score and shot number
-    ; Create loop for 5 shooting attempts
+; Create the loop for 5 shooting attempts
 ShotLoop:
+    ;Display the current shot number
     mov edx, OFFSET shotNumberMsg
     call WriteString
     mov eax, shotNumber
     call WriteDec
     call Crlf
 
+    ;Call shooting power procedure
     call GetPower
     call Crlf
 
+    ;Call shooting angle procedure
     call GetAngle
     call Crlf
 
+    ;Call shot calculation procedure
     call CheckShot
 
+    ;Move to the next shot and repeat for 5 times 
     inc ShotNumber
     cmp ShotNumber, 5
     jle ShotLoop
+
+
     ; Display current shot number
     ; Call shooting power procedure
     ; Call shooting angle procedure
