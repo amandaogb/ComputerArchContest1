@@ -48,11 +48,22 @@ ShowMenu ENDP
 
 ; Create procedure to get shooting power
 GetPower PROC
-mov edx, OFFSET promptMsg
-	call WriteString
-	call ReadInt
-	mov shootingPower, eax
-	ret
+GetPowerInput: ;come back here if the number is invalid 
+    mov edx, OFFSET promptMsg ;get the power question
+    call WriteString
+    call ReadInt
+
+    ;check if number is between 1 and 10
+    cmp eax, 1 
+    jl InvalidPower ;if less than 1, invalid
+    cmp eax, 10
+    jg InvalidPower ;if more than 10, invalid
+
+    mov shootingPower, eax ;save the number that is in the range
+    ret
+
+    InvalidPower:
+    ;will add this part
 GetPower ENDP
 ; Create procedure to get shooting angle
 GetAngle PROC
