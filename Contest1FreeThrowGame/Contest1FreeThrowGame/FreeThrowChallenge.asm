@@ -1,33 +1,33 @@
 INCLUDE Irvine32.inc 
 
 .data
+;Game Title
 titleMsg BYTE "===== FREE THROW CHALLENGE!!! =====", 0
+
+;Shooting Power Input
 promptMsg BYTE "Please enter your shooting power (1-10): ", 0
 shootingPower DWORD ?
 
-; Shooting angle input
+;Shooting Angle Input
 angleMsg BYTE "Please enter your shooting angle (1-90): ", 0
 shootingAngle DWORD ?
 
 
-; Add main menu messages
+;Main menu messages and choice
 menuMsg BYTE "1. Start Game", 13,10, "2. Exit", 0 
 choiceMsg BYTE "Enter your choice: ", 0
 menuChoice DWORD ?
 
-; Add shooting angle message and variable
-
-
-; Add shot made/missed messages
+;Shot made/missed messages
 madeMsg BYTE "SHOT MADE!", 0
 missedMsg BYTE "SHOT MISSED!", 0
 
-; Add score and shot number variables
+;Score and shot number variables
 score DWORD 0
 shotNumber DWORD 1
 shotNumberMsg BYTE "Shot Number: ", 0
 
-; Add final score message
+;Final score messages
 finalMsg BYTE "GAME OVER! Final Score: ", 0
 outOfMsg BYTE " out of 5", 0
 
