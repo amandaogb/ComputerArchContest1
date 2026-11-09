@@ -84,20 +84,64 @@ Option to play again
 
 Input validation for shooting power, angle, and menu choices
 
-## Week 1 – Basic Game
+## Week 1 – October 27: Initial Setup
 
-Person 1:
+### Amanda Ogbonna:
 
-Main menu
+Created the game title and basic program
 
-User input
+Added shooting power input
 
-Shooting power selection
+Fixed Irvine32 configuration issues
 
-Person 2:
+### Elif Bayrak:
 
-Shooting procedure
+Planned the game structure and procedures (committed November 5)
 
-Shooting angle input
+## Week 2 – November 5: Game Development
 
-Shot success calculation
+### Amanda Ogbonna:
+
+Created the main menu
+
+Moved shooting power into a procedure
+
+Added score and shot number variables
+
+Implemented the five-shot loop
+
+Fixed the main procedure
+
+### Elif Bayrak:
+
+Created the shooting angle procedure
+
+Implemented shot success and failure calculations
+
+Added shot result messages
+
+Created the final score procedure
+
+Added the final score procedure call
+
+## Week 3 – November 9
+
+### Amanda Ogbonna:
+
+Improved code comments and formatting
+
+Help fix any remaining bugs
+
+### Elif Bayrak:
+
+Test shooting calculations with different inputs
+
+Update project documentation
+
+### Both Team Members:
+
+Complete final testing
+
+Prepare the game demonstration
+
+Review the final project
