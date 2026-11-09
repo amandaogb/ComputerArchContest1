@@ -74,8 +74,6 @@ The game continues for five attempts.
 
 After five shots, the final score is displayed.
 
-Note: The game currently does not validate input ranges.
-
 ## Future Improvements
 
 Different difficulty levels
