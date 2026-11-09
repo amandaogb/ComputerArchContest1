@@ -32,8 +32,11 @@ shotNumberMsg BYTE "Shot Number: ", 0
 finalMsg BYTE "GAME OVER! Final Score: ", 0
 outOfMsg BYTE " out of 5", 0
 
-;Invalid Power Message
-invalidPowerMsg BYTE "Invalid power! Please keep your value between 1-10", 0
+;Invalid Power/Angle Messages
+invalidPowerMsg BYTE "Invalid power! Please enter a number from 1 to 10", 0
+invalidAngleMsg BYTE "Invalid angle! Please enter a number from 1 to 90.", 0
+
+
 .code
 
 ; Create procedure to display main menu
@@ -70,11 +73,19 @@ GetPowerInput: ;come back here if the number is invalid
     call Crlf
     jmp GetPowerInput ;ask for power again
 GetPower ENDP
+
 ; Create procedure to get shooting angle
 GetAngle PROC
     mov edx, OFFSET angleMsg
     call WriteString
     call ReadInt
+
+    ;Angle validation 
+    cmp eax, 1
+    jl InvalidAngle
+    cmp eax, 90
+    jg InvalidAngle
+
     mov shootingAngle, eax
     ret
 GetAngle ENDP
